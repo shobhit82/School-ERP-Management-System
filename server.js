@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
@@ -22,7 +23,7 @@ app.use('/library', require('./routes/library'));
 
 const mongoURI = 'mongodb://127.0.0.1:27017/Student-Management-System-Data';
 
-mongoose.connect(mongoURI)
+mongoose.connect(process.env.MONGODB_URI)
     .then(async () => {
         console.log("Connect to MongoDB successfully!");
 
