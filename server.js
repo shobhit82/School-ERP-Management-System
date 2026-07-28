@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-const port = 1234;
+const port = process.env.PORT || 1234;
 const insertTimetable = require("./seed/timetableSeed");
 
 app.set('view engine', 'ejs');
@@ -21,7 +21,7 @@ app.use('/library', require('./routes/library'));
 
 // MongoDB Connect
 
-const mongoURI = 'mongodb://127.0.0.1:27017/Student-Management-System-Data';
+// const mongoURI = 'mongodb://127.0.0.1:27017/Student-Management-System-Data';
 
 mongoose.connect(process.env.MONGODB_URI)
     .then(async () => {
