@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+/* =================
+   SCROLL BAR
+================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+
+::-webkit-scrollbar-track{
+    background:#e2e8f0;
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:
+    linear-gradient(
+        180deg,
+        #2563eb,
+        #9333ea
+    );
+
+    border-radius:20px;
+}
+
+
+
+/* =================
+   BODY
+================= */
+
+body{
+
+    min-height:100vh;
+
+    padding:40px 20px;
+
+    background:
+    radial-gradient(
+        circle at top left,
+        #dbeafe,
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at bottom right,
+        #ddd6fe,
+        transparent 35%
+    ),
+
+    #f8fafc;
+
+}
+
+
+
+/* =================
+ MAIN CONTAINER
+================= */
+
+.library{
+
+    max-width:1350px;
+
+    margin:auto;
+
+}
+
+
+
+/* =================
+ HEADING
+================= */
+
+.heading{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+
+.heading h1{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    letter-spacing:.5px;
+
+}
+
+
+.heading p{
+
+    margin-top:12px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+}
+
+
+
+/* =================
+ ADD NEW CARD
+================= */
+
+
+.add-new{
+
+    width:100%;
+
+    margin-bottom:45px;
+
+}
+
+
+.add-new li{
+
+    list-style:none;
+
+    width:100%;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+
+    background:
+    rgba(255,255,255,.75);
+
+
+    backdrop-filter:blur(20px);
+
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.08);
+
+
+    border:1px solid rgba(255,255,255,.6);
+
+    transition:.4s;
+
+}
+
+
+.add-new li:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.add-new h3{
+
+    font-size:28px;
+
+    color:#1e293b;
+
+}
+
+
+
+.icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:25px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    border-radius:50%;
+
+
+    color:white;
+
+    font-size:35px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #9333ea
+    );
+
+
+    box-shadow:
+
+    0 10px 25px rgba(37,99,235,.35);
+
+}
+
+
+
+.add-new p{
+
+    max-width:900px;
+
+    margin:20px auto;
+
+    color:#64748b;
+
+    line-height:1.8;
+
+}
+
+
+
+.add-new ul{
+
+    max-width:500px;
+
+    margin:25px auto;
+
+    text-align:left;
+
+}
+
+
+.add-new ul li{
+
+    padding:7px;
+
+    background:none;
+
+    box-shadow:none;
+
+    border:none;
+
+    color:#8727b3;
+
+    font-size:13px;
+    border-bottom: 2px solid #8727b3;
+}
+
+
+
+.add-new a{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #9333ea
+    );
+
+
+    transition:.3s;
+
+}
+
+
+
+.add-new a:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 12px 30px rgba(37,99,235,.4);
+
+}
+
+
+
+/* =================
+ TABLE SECTION
+================= */
+
+
+.issu-book{
+
+    padding:35px;
+
+    border-radius:30px;
+
+
+    background:
+
+    rgba(255,255,255,.85);
+
+
+    backdrop-filter:blur(20px);
+
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.08);
+
+
+    overflow-x:auto;
+
+}
+
+
+
+.table-heading{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+
+.table-heading h2{
+
+    font-size:30px;
+
+    color:#0f172a;
+
+}
+
+
+.table-heading p{
+
+    color:#64748b;
+
+}
+
+
+
+/* TABLE */
+
+
+table{
+
+    width:100%;
+
+    min-width:950px;
+
+    border-collapse:collapse;
+
+}
+
+
+
+thead{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #9333ea
+    );
+
+
+    color:white;
+
+}
+
+
+th{
+
+    padding:16px;
+
+    font-size:14px;
+
+}
+
+
+
+td{
+
+    padding:15px;
+
+    text-align:center;
+
+    color:#475569;
+
+    border-bottom:1px solid #e2e8f0;
+
+}
+
+
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+
+tbody tr:hover{
+
+    background:#f8fafc;
+
+    transform:scale(1.01);
+
+}
+
+
+
+/* =================
+ ACTION BUTTON
+================= */
+
+
+td .reissue-btn{
+
+    padding:9px 18px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:600;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #9333ea
+    );
+
+
+    display:inline-block;
+     transition: all linear .3s;
+}
+
+
+
+td form button{
+
+    margin-top:8px;
+
+    padding:9px 18px;
+
+    border:none;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:12px;
+
+    transition: all linear .3s;
+    background:
+
+    linear-gradient(
+        135deg,
+        #ef4444,
+        #991b1b
+    );
+
+}
+
+td button:hover{
+    transform: translateY(-3px);
+}
+
+
+/* =================
+ INFO CARD
+================= */
+
+
+.library-info{
+
+    margin-top:45px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-bottom: 100px;
+}
+
+
+
+.library-info .div{
+
+    padding:30px;
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+.library-info h2{
+
+    color:#1e293b;
+
+}
+
+
+
+.library-info p{
+
+    margin-top:15px;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+}
+
+
+
+/* =================
+ FIXED HOME BUTTON
+================= */
+
+
+.home-btn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    padding:14px 35px;
+
+
+    border-radius:30px;
+
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #334155,
+        #1e293b
+    );
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.25);
+
+
+    transition:.3s;
+
+}
+
+
+
+.home-btn:hover{
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #9333ea
+    );
+
+
+    transform:
+
+    translateX(-50%)
+    translateY(-5px);
+
+}
+
+
+
+/* =================
+ TABLET
+================= */
+
+
+@media(max-width:900px){
+
+
+.heading h1{
+
+    font-size:32px;
+
+}
+
+
+.library-info{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.add-new li{
+
+    padding:25px;
+
+}
+
+}
+
+
+
+/* =================
+ MOBILE
+================= */
+
+
+@media(max-width:550px){
+
+
+body{
+
+    padding:25px 15px;
+
+}
+
+
+.heading h1{
+
+    font-size:25px;
+
+}
+
+
+.heading p{
+
+    font-size:13px;
+
+}
+
+
+.add-new h3{
+
+    font-size:22px;
+
+}
+
+
+.issu-book{
+
+    padding:18px;
+
+}
+
+
+.table-heading h2{
+
+    font-size:22px;
+
+}
+
+
+.home-btn{
+
+    width:90%;
+
+    text-align:center;
+
+    bottom:15px;
+
+}
+
+}

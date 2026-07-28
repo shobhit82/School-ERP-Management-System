@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+<body>
+    <main>
+        <h1>Student Management Dashboard</h1>
+        <p>Manage student records from one centralized dashboard. Add new students, organize class-wise information,
+            update existing records, monitor attendance, and view complete student profiles with ease.</p>
+
+        <div class="student-add">
+            <h2>Add New Student / New Registration</h2>
+            <p>Register a new student by entering all required information including personal details, class, section,
+                contact information, and admission details. The student will automatically appear in the appropriate
+                class list after being added.</p>
+            <button><a style="color: white; text-decoration: none;" , href="dashboard/add"> Add New Student
+                    🆕</a></button>
+        </div>
+
+        <div class="student-list">
+            <h2>Show All Students by Class</h2>
+            <p>Browse students organized according to their respective classes. Select any class to view its students,
+                update their information, or remove records whenever necessary.</p>
+            <div class="class-grid">
+                <button><a href="/dashboard/class/class 1" style="text-decoration: none;  ">📘 Class 1</a></button>
+                <button><a href="/dashboard/class/class 2" style="text-decoration: none; ">📗 Class 2</a></button>
+                <button><a href="/dashboard/class/class 3" style="text-decoration: none;">📙 Class 3</a></button>
+                <button><a href="/dashboard/class/class 4" style="text-decoration: none; ">📕 Class 4</a></button>
+                <button><a href="/dashboard/class/class 5" style="text-decoration: none; ">📓 Class 5</a></button>
+                <button><a href="/dashboard/class/class 6" style="text-decoration: none; ">📒 Class 6</a></button>
+                <button><a href="/dashboard/class/class 7" style="text-decoration: none; ">📔 Class 7</a></button>
+                <button><a href="/dashboard/class/class 8" style="text-decoration: none; ">📚 Class 8</a></button>
+            </div>
+        </div>
+
+        <div class="student-info">
+            <form action="/dashboard/student-info" method="post">
+                <h2>Student Profile & Academic Details</h2>
+                <p>View complete information about every registered student, including personal details, academic
+                    information, attendance records, contact details, and admission information in one organized
+                    profile.
+                </p>
+                <div class="form">
+                    <div>
+                        <label for="">First Name</label>
+                        <input type="text" name="firstname" required placeholder="Enter First Name" id="">
+                    </div>
+                    <div>
+                        <label for="">Last Name</label>
+                        <input type="text" name="lastname" required placeholder="Enter Last Name" id="">
+                    </div>
+                    <div>
+                        <label for="">Roll Number</label>
+                        <input type="text" name="rollno" placeholder="Enter Roll Number" required id="">
+                    </div>
+                    <div>
+                        <label for="">Class</label>
+                        <select name="chooseclass" required id="">
+                            <option value="">--Select--</option>
+                            <option value="class 1">Class 1</option>
+                            <option value="class 2">Class 2</option>
+                            <option value="class 3">Class 3</option>
+                            <option value="class 4">Class 4</option>
+                            <option value="class 5">Class 5</option>
+                            <option value="class 6">Class 6</option>
+                            <option value="class 7">Class 7</option>
+                            <option value="class 8">Class 8</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Student Details →</button>
+                    </div>
+
+            </form>
+        </div>
+        </div>
+
+        <a href="/" class="home-btn">← Back to Home</a>
+
+    </main>
+</body>
+
+</html>

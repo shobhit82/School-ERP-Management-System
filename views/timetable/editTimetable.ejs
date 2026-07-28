@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Timetable</title>
+
+    <link rel="stylesheet" href="/css/editTimetable.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>✏️ Customize Timetable</h1>
+
+        <p>
+
+            Update class information, room number, class teacher,
+
+            subjects and teachers for every period.
+
+        </p>
+
+        <form action="/timetable/update/<%= timetable._id %>" method="POST">
+
+            <div class="card">
+
+                <h2>Class Information</h2>
+
+                <div class="grid">
+
+                    <div>
+
+                        <label>Class Name</label>
+
+                        <input type="text" name="className" value="<%= timetable.className %>" readonly>
+
+                    </div>
+
+                    <div>
+
+                        <label>Session</label>
+
+                        <input type="text" name="session" value="<%= timetable.session %>" readonly>
+
+                    </div>
+
+                    <div>
+
+                        <label>Room Number</label>
+
+                        <input type="text" name="roomNumber" value="<%= timetable.roomNumber %>">
+
+                    </div>
+
+                    <div>
+
+                        <label>Class Teacher</label>
+
+                        <input type="text" name="classTeacher" value="<%= timetable.classTeacher %>">
+
+                    </div>
+
+                    <div>
+
+                        <label>Shift</label>
+
+                        <input type="text" name="shift" value="<%= timetable.shift %>">
+
+                    </div>
+
+                   
+
+                </div>
+
+            </div>
+
+            <!-- ==========================
+                    Monday
+            =========================== -->
+
+            <div class="card">
+
+                <h2>📅 Monday</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Period</th>
+
+                            <th>Subject</th>
+
+                            <th>Teacher</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Period 1</td>
+
+                            <td>
+
+                                <input type="text" name="monday_period1_subject"
+                                    value="<%= timetable.monday.period1.subject %>">
+
+                            </td>
+
+                            <td>
+
+                                <input type="text" name="monday_period1_teacher"
+                                    value="<%= timetable.monday.period1.teacher %>">
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Period 2</td>
+
+                            <td>
+
+                                <input type="text" name="monday_period2_subject"
+                                    value="<%= timetable.monday.period2.subject %>">
+
+                            </td>
+
+                            <td>
+
+                                <input type="text" name="monday_period2_teacher"
+                                    value="<%= timetable.monday.period2.teacher %>">
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Period 3</td>
+
+                            <td>
+
+                                <input type="text" name="monday_period3_subject"
+                                    value="<%= timetable.monday.period3.subject %>">
+
+                            </td>
+
+                            <td>
+
+                                <input type="text" name="monday_period3_teacher"
+                                    value="<%= timetable.monday.period3.teacher %>">
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Period 4</td>
+
+                            <td>
+
+                                <input type="text" name="monday_period4_subject"
+                                    value="<%= timetable.monday.period4.subject %>">
+
+                            </td>
+
+                            <td>
+
+                                <input type="text" name="monday_period4_teacher"
+                                    value="<%= timetable.monday.period4.teacher %>">
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Period 5</td>
+
+                            <td>
+
+                                <input type="text" name="monday_period5_subject"
+                                    value="<%= timetable.monday.period5.subject %>">
+
+                            </td>
+
+                            <td>
+
+                                <input type="text" name="monday_period5_teacher"
+                                    value="<%= timetable.monday.period5.teacher %>">
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Period 6</td>
+
+                            <td>
+
+                                <input type="text" name="monday_period6_subject"
+                                    value="<%= timetable.monday.period6.subject %>">
+
+                            </td>
+
+                            <td>
+
+                                <input type="text" name="monday_period6_teacher"
+                                    value="<%= timetable.monday.period6.teacher %>">
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Period 7</td>
+
+                            <td>
+
+                                <input type="text" name="monday_period7_subject"
+                                    value="<%= timetable.monday.period7.subject %>">
+
+                            </td>
+
+                            <td>
+
+                                <input type="text" name="monday_period7_teacher"
+                                    value="<%= timetable.monday.period7.teacher %>">
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Period 8</td>
+
+                            <td>
+
+                                <input type="text" name="monday_period8_subject"
+                                    value="<%= timetable.monday.period8.subject %>">
+
+                            </td>
+
+                            <td>
+
+                                <input type="text" name="monday_period8_teacher"
+                                    value="<%= timetable.monday.period8.teacher %>">
+
+                            </td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- ==========================
+                    Tuesday
+            =========================== -->
+
+            <div class="card">
+
+                <h2>📅 Tuesday</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Period</th>
+
+                            <th>Subject</th>
+
+                            <th>Teacher</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <% for(let i=1;i<=8;i++){ %>
+
+                            <tr>
+
+                                <td>Period <%= i %>
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="tuesday_period<%= i %>_subject"
+                                        value="<%= timetable.tuesday['period'+i].subject %>">
+
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="tuesday_period<%= i %>_teacher"
+                                        value="<%= timetable.tuesday['period'+i].teacher %>">
+
+                                </td>
+
+                            </tr>
+
+                            <% } %>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- ==========================
+                    Wednesday
+            =========================== -->
+
+            <div class="card">
+
+                <h2>📅 Wednesday</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Period</th>
+
+                            <th>Subject</th>
+
+                            <th>Teacher</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <% for(let i=1;i<=8;i++){ %>
+
+                            <tr>
+
+                                <td>Period <%= i %>
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="wednesday_period<%= i %>_subject"
+                                        value="<%= timetable.wednesday['period'+i].subject %>">
+
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="wednesday_period<%= i %>_teacher"
+                                        value="<%= timetable.wednesday['period'+i].teacher %>">
+
+                                </td>
+
+                            </tr>
+
+                            <% } %>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <!-- ==========================
+                    Thursday
+            =========================== -->
+
+            <div class="card">
+
+                <h2>📅 Thursday</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Period</th>
+
+                            <th>Subject</th>
+
+                            <th>Teacher</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <% for(let i=1;i<=8;i++){ %>
+
+                            <tr>
+
+                                <td>Period <%= i %>
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="thursday_period<%= i %>_subject"
+                                        value="<%= timetable.thursday['period'+i].subject %>">
+
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="thursday_period<%= i %>_teacher"
+                                        value="<%= timetable.thursday['period'+i].teacher %>">
+
+                                </td>
+
+                            </tr>
+
+                            <% } %>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- ==========================
+                    Friday
+            =========================== -->
+
+            <div class="card">
+
+                <h2>📅 Friday</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Period</th>
+
+                            <th>Subject</th>
+
+                            <th>Teacher</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <% for(let i=1;i<=8;i++){ %>
+
+                            <tr>
+
+                                <td>Period <%= i %>
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="friday_period<%= i %>_subject"
+                                        value="<%= timetable.friday['period'+i].subject %>">
+
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="friday_period<%= i %>_teacher"
+                                        value="<%= timetable.friday['period'+i].teacher %>">
+
+                                </td>
+
+                            </tr>
+
+                            <% } %>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- ==========================
+                    Saturday
+            =========================== -->
+
+            <div class="card">
+
+                <h2>📅 Saturday</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Period</th>
+
+                            <th>Subject</th>
+
+                            <th>Teacher</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <% for(let i=1;i<=8;i++){ %>
+
+                            <tr>
+
+                                <td>Period <%= i %>
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="saturday_period<%= i %>_subject"
+                                        value="<%= timetable.saturday['period'+i].subject %>">
+
+                                </td>
+
+                                <td>
+
+                                    <input type="text" name="saturday_period<%= i %>_teacher"
+                                        value="<%= timetable.saturday['period'+i].teacher %>">
+
+                                </td>
+
+                            </tr>
+
+                            <% } %>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <!-- ==========================
+                    Action Buttons
+            =========================== -->
+
+            <div class="action-buttons">
+
+                <button type="submit" class="update-btn">
+
+                    💾 Update Timetable
+
+                </button>
+
+                <a href="/timetable" class="cancel-btn">
+
+                    ← Back to Timetable
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

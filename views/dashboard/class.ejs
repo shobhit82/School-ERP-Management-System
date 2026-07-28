@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="/css/class.css">
+</head>
+
+<body>
+
+    <% if (students.length===0) { %>
+
+        <div class="no-student">
+            <div class="icon">📚</div>
+
+            <h1>No Students Found</h1>
+
+            <p>
+                There are currently no students registered in
+                <strong>
+                    <%= classname.toUpperCase() %>
+                </strong>.
+                Please add students to this class to view their
+                records here.
+            </p>
+
+            <a href="/dashboard/add" class="add-btn">
+                ➕ Add New Student
+            </a>
+
+            <a href="/dashboard" class="back-btn">
+                ← Back to Dashboard
+            </a>
+        </div>
+
+        <% } else { %>
+
+            <div class="student">
+                <h1>📖 Student List</h1>
+
+                <p>
+                    Welcome to the class student directory. Here you can
+                    access all registered students of
+                    <strong>
+                        <%= classname.toUpperCase() %>
+                    </strong>,
+                    including their admission numbers, roll numbers,
+                    personal details, and contact information in a
+                    structured format.
+                </p>
+            </div>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th style="text-transform: uppercase;" colspan="10">
+                            <%= students[0].chooseclass %>
+                        </th>
+                    </tr>
+
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Admission Number</th>
+                        <th>Name</th>
+                        <th>Roll Number</th>
+                        <th>Date Of Birth</th>
+                        <th>Father's Name</th>
+                        <th>Mother's Name</th>
+                        <th>Mobile Number</th>
+                        <th>Email Address</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                    <% students.forEach(student=> { %>
+
+                        <tr>
+                            <td>
+                                <%= student.admission %>
+                            </td>
+                            <td>
+                                <%= student.firstname %>
+                                    <%= student.lastname %>
+                            </td>
+                            <td>
+                                <%= student.rollno %>
+                            </td>
+                            <td>
+                                <%= student.dob %>
+                            </td>
+                            <td>
+                                <%= student.fathername %>
+                            </td>
+                            <td>
+                                <%= student.mothername %>
+                            </td>
+                            <td>
+                                <%= student.fathernumber %>
+                            </td>
+                            <td>
+                                <%= student.email %>
+                            </td>
+                            <td>
+                                <%= student.address %>
+                            </td>
+                            <td>
+                                <a href="/dashboard/edit/<%=student._id%>">Edit</a>
+                                <form action="/dashboard/delete/<%= student._id %>" method="post"
+                                    onsubmit="return confirm(`Are you sure you went to delete this Student?`)">
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+
+                        <% }) %>
+                </tbody>
+
+
+
+
+            </table>
+            <div class="div">
+                <a href="/dashboard" class="back-btn">
+                    ← Back to Dashboard
+                </a>
+                <a href="/dashboard/add" class="add-btn">
+                    ➕ Add New Student
+                </a>
+            </div>
+
+            <% } %>
+</body>
+
+</html>

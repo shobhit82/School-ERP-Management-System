@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #bfdbfe 0%, transparent 35%),
+        linear-gradient(135deg, #eef6ff, #f8fbff, #edf4ff);
+    color: #1e293b;
+    padding: 40px;
+}
+::-webkit-scrollbar {
+    width: 11px;
+}
+::-webkit-scrollbar-track {
+    background: #dbeafe;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            #2563eb,
+            #7c3aed,
+            #06b6d4);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            #1d4ed8,
+            #6d28d9,
+            #0891b2);
+}
+
+/* ===========================
+          Heading
+=========================== */
+
+body>h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+body>h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 90%;
+    margin: auto;
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 70px;
+}
+
+/* ===========================
+        Class Card
+=========================== */
+
+.class {
+    width: 90%;
+    margin: 0 auto 70px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, .12);
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    transition: .4s;
+}
+
+
+.class:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, .18);
+}
+
+/* ===========================
+       Class Name
+=========================== */
+
+.class-name {
+    display: flex;
+    justify-content: center;
+}
+
+.class-name h1 {
+    background: linear-gradient(135deg, #0c2865, #4c8ffa);
+    background-image: linear-gradient(to top, #0c2865, rgb(53, 53, 162), rgb(82, 88, 242), rgb(143, 201, 251));
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 14px 35px;
+    border-radius: 12px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* ===========================
+      Information Cards
+=========================== */
+
+.class-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.class-info .div {
+    flex: 1;
+    min-width: 320px;
+    background: #f8fbff;
+    border: 2px solid #dbeafe;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s;
+}
+
+.class-info .div:hover {
+    border-color: #3b82f6;
+    transform: translateY(-5px);
+}
+
+.class-info .div h2 {
+    width: 100%;
+    background: linear-gradient(135deg, #cad9fa, #f5f9ff);
+    color: rgb(62, 31, 185);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    margin: 6px 0;
+    word-spacing: 4px;
+}
+
+/* ===========================
+          Button
+=========================== */
+
+.class-info .div button {
+    height: 48px;
+    margin-top: 35px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #081a41, #3b82f6);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+    transition: .3s;
+}
+
+.class-info .div button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+}
+
+.class-info .div p {
+    width: 100%;
+    color: rgb(55, 54, 54);
+    font-size: .8em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ===========================
+        Timetable
+=========================== */
+
+.class-timetable {
+    background: #f8fbff;
+    border: 2px solid #dbeafe;
+    padding: 25px;
+    border-radius: 20px;
+    overflow-x: auto;
+}
+
+.class-timetable table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+.class-timetable table thead th {
+    background: #2563eb;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.class-timetable table tbody th {
+    background: #eff6ff;
+    color: #1e3a8a;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.class-timetable table tbody td {
+    padding: 12px;
+    background: white;
+    border: 1px solid #dbeafe;
+    transition: .3s;
+    text-align: center;
+}
+
+.class-timetable table tbody tr:hover td {
+    background: #dbeafe;
+}
+
+/* ===========================
+        Back Home Button
+=========================== */
+
+.home-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    background: linear-gradient(135deg, #081a41, #3b82f6);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.home-btn:hover {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.35);
+}
+
+.home-btn:active {
+    transform: scale(0.97);
+}
+
+/* ===========================
+        Responsive
+=========================== */
+@media (max-width: 768px) {
+    .home-btn {
+        bottom: 15px;
+        right: 15px;
+        width: calc(100% - 30px);
+        padding: 14px;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+}
+
+@media(max-width:900px) {
+
+    body {
+        padding: 20px;
+    }
+
+    body>h1 {
+        font-size: 2.2rem;
+    }
+
+    .class {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .class-info {
+        flex-direction: column;
+    }
+
+    .class-info .div {
+        width: 100%;
+    }
+
+    .class-name h1 {
+        font-size: 1.5rem;
+    }
+}

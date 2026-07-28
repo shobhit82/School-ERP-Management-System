@@ -1,0 +1,762 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/*=========================================
+Scrollbar
+=========================================*/
+::-webkit-scrollbar {
+    width: 11px;
+}
+::-webkit-scrollbar-track {
+    background: #dbeafe;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            #2563eb,
+            #7c3aed,
+            #06b6d4);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            #1d4ed8,
+            #6d28d9,
+            #0891b2);
+}
+/*=========================================
+Body
+=========================================*/
+body {
+    min-height: 100vh;
+    padding: 60px 20px;
+    background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 30%),
+        radial-gradient(circle at bottom right, #bfdbfe 0%, transparent 30%),
+        linear-gradient(135deg, #eef4ff, #f8fbff);
+}
+/*=========================================
+Main Container
+=========================================*/
+main {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+}
+/*=========================================
+Page Heading
+=========================================*/
+main>h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 18px;
+    letter-spacing: .5px;
+}
+main>p {
+    width: 850px;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 55px;
+}
+/*=========================================
+Form
+=========================================*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+/*=========================================
+All Section Cards
+=========================================*/
+.personal-info,
+.acadmice-info,
+.parent-info,
+.address-info {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, .08);
+    transition: .35s;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    position: relative;
+    overflow: hidden;
+}
+/*=========================================
+Hover Animation
+=========================================*/
+.personal-info:hover,
+.acadmice-info:hover,
+.parent-info:hover,
+.address-info:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .12);
+}
+/*=========================================
+Top Border Colors
+=========================================*/
+.personal-info {
+    border-top: 8px solid #2563eb;
+}
+.acadmice-info {
+    border-top: 8px solid #10b981;
+}
+.parent-info {
+    border-top: 8px solid #f59e0b;
+}
+.address-info {
+    border-top: 8px solid #ef4444;
+}
+/*=========================================
+Section Heading
+=========================================*/
+.personal-info h2,
+.acadmice-info h2,
+.parent-info h2,
+.address-info h2 {
+    grid-column: 1/-1;
+    font-size: 31px;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid #edf2f7;
+}
+/*=========================================
+Form Fields
+=========================================*/
+.personal-info div,
+.acadmice-info div,
+.parent-info div,
+.address-info div {
+    display: flex;
+    flex-direction: column;
+}
+/*=========================================
+Field Labels
+=========================================*/
+label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 10px;
+}
+/*=========================================
+Input, Select & Date Fields
+=========================================*/
+input,
+select {
+    width: 100%;
+    height: 56px;
+    padding: 0 18px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e293b;
+    background: #f8fbff;
+    border: 2px solid #dbe7f7;
+    border-radius: 14px;
+    outline: none;
+    transition: .35s;
+}
+/*=========================================
+Placeholder
+=========================================*/
+input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+/*=========================================
+Focus Effect
+=========================================*/
+input:focus,
+select:focus {
+    background: #ffffff;
+    border-color: #2563eb;
+    box-shadow:
+        0 0 0 5px rgba(37, 99, 235, .12),
+        0 8px 20px rgba(37, 99, 235, .12);
+}
+/*=========================================
+Readonly Field
+=========================================*/
+input[readonly] {
+    background: #eef4ff;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: not-allowed;
+}
+/*=========================================
+Date & DateTime
+=========================================*/
+input[type="date"],
+input[type="datetime-local"] {
+    cursor: pointer;
+}
+/*=========================================
+Select
+=========================================*/
+select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5L8 12l6.5-6.5' stroke='%2364748b' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 18px;
+    padding-right: 50px;
+}
+/*=========================================
+Option
+=========================================*/
+option {
+    font-size: 15px;
+    color: #1e293b;
+}
+/*=========================================
+Number Field
+=========================================*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+}
+/*=========================================
+Email
+=========================================*/
+input[type="email"] {
+    text-transform: lowercase;
+}
+/*=========================================
+Field Hover
+=========================================*/
+input:hover,
+select:hover {
+    border-color: #93c5fd;
+}
+/*=========================================
+Disabled
+=========================================*/
+input:disabled,
+select:disabled {
+    background: #f1f5f9;
+    cursor: not-allowed;
+}
+/*=========================================
+Autocomplete
+=========================================*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+}
+/*=========================================
+Every Form Field
+=========================================*/
+.personal-info div,
+.acadmice-info div,
+.parent-info div,
+.address-info div {
+    position: relative;
+}
+/*=========================================
+Input Hover Animation
+=========================================*/
+.personal-info div:hover input,
+.personal-info div:hover select,
+.acadmice-info div:hover input,
+.acadmice-info div:hover select,
+.parent-info div:hover input,
+.parent-info div:hover select,
+.address-info div:hover input,
+.address-info div:hover select {
+    transform: translateY(-2px);
+}
+/*=========================================
+Section Animation
+=========================================*/
+.personal-info,
+.acadmice-info,
+.parent-info,
+.address-info {
+    animation: fadeUp .7s ease;
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*=========================================
+Card Decoration
+=========================================*/
+.personal-info::before,
+.acadmice-info::before,
+.parent-info::before,
+.address-info::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    top: -120px;
+    right: -120px;
+    opacity: .05;
+}
+.personal-info::before {
+    background: #2563eb;
+}
+.acadmice-info::before {
+    background: #10b981;
+}
+.parent-info::before {
+    background: #f59e0b;
+}
+.address-info::before {
+    background: #ef4444;
+}
+/*=========================================
+Section Bottom Decoration
+=========================================*/
+.personal-info::after,
+.acadmice-info::after,
+.parent-info::after,
+.address-info::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    left: -50px;
+    bottom: -50px;
+    opacity: .05;
+}
+.personal-info::after {
+    background: #2563eb;
+}
+.acadmice-info::after {
+    background: #10b981;
+}
+.parent-info::after {
+    background: #f59e0b;
+}
+.address-info::after {
+    background: #ef4444;
+}
+/*=========================================
+Form Field Spacing
+=========================================*/
+.personal-info>div,
+.acadmice-info>div,
+.parent-info>div,
+.address-info>div {
+    z-index: 2;
+}
+/*=========================================
+Section Heading Hover
+=========================================*/
+.personal-info:hover h2 {
+    color: #2563eb;
+}
+.acadmice-info:hover h2 {
+    color: #10b981;
+}
+.parent-info:hover h2 {
+    color: #f59e0b;
+}
+.address-info:hover h2 {
+    color: #ef4444;
+}
+/*=========================================
+Action Button Container
+=========================================*/
+form>div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+/*=========================================
+Common Button
+=========================================*/
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 34px;
+    border-radius: 14px;
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: .3px;
+}
+/*=========================================
+Save Button
+=========================================*/
+button[type="submit"] {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+    box-shadow: 0 15px 30px rgba(37, 99, 235, .25);
+}
+/*=========================================
+Reset Button
+=========================================*/
+button[type="reset"] {
+    background: #ffffff;
+    color: #ef4444;
+    border: 2px solid #ef4444;
+}
+/*=========================================
+Button Hover
+=========================================*/
+button[type="submit"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 35px rgba(37, 99, 235, .35);
+}
+button[type="reset"]:hover {
+    background: #ef4444;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 18px 35px rgba(239, 68, 68, .28);
+}
+/*=========================================
+Button Active
+=========================================*/
+button:active {
+    transform: scale(.97);
+}
+/*=========================================
+Shine Effect
+=========================================*/
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: rgba(255, 255, 255, .35);
+    transform: skewX(-30deg);
+    transition: .6s;
+}
+button:hover::before {
+    left: 140%;
+}
+/*=========================================
+Back Dashboard Button
+=========================================*/
+.home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+    text-decoration: none;
+    padding: 16px 30px;
+    border-radius: 28px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .35s;
+    box-shadow: 0 15px 30px rgba(15, 23, 42, .20);
+}
+/*=========================================
+Back Button Hover
+=========================================*/
+.home-btn:hover {
+    background: #2563eb;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 35px rgba(37, 99, 235, .28);
+}
+/*=========================================
+Back Button Active
+=========================================*/
+.home-btn:active {
+    transform: scale(.97);
+}
+/*=========================================
+Selection
+=========================================*/
+::selection {
+    background: #2563eb;
+    color: #ffffff;
+}
+/*=========================================
+Background Decorative Shapes
+=========================================*/
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(80px);
+}
+body::before {
+    width: 320px;
+    height: 320px;
+    top: -120px;
+    left: -100px;
+    background: rgba(37, 99, 235, .18);
+}
+body::after {
+    width: 350px;
+    height: 350px;
+    right: -120px;
+    bottom: -100px;
+    background: rgba(16, 185, 129, .18);
+}
+/*=========================================
+Glass Effect Cards
+=========================================*/
+.personal-info,
+.acadmice-info,
+.parent-info,
+.address-info {
+    background: rgba(255, 255, 255, .92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-left: 1px solid rgba(255, 255, 255, .45);
+    border-right: 1px solid rgba(255, 255, 255, .45);
+    border-bottom: 1px solid rgba(255, 255, 255, .45);
+}
+/*=========================================
+Card Glow Hover
+=========================================*/
+.personal-info:hover {
+    box-shadow:
+        0 30px 70px rgba(37, 99, 235, .18);
+}
+.acadmice-info:hover {
+    box-shadow:
+        0 30px 70px rgba(16, 185, 129, .18);
+}
+.parent-info:hover {
+    box-shadow:
+        0 30px 70px rgba(245, 158, 11, .18);
+}
+.address-info:hover {
+    box-shadow:
+        0 30px 70px rgba(239, 68, 68, .18);
+}
+/*=========================================
+Section Icons Animation
+=========================================*/
+.personal-info h2,
+.acadmice-info h2,
+.parent-info h2,
+.address-info h2 {
+    transition: .35s;
+}
+.personal-info:hover h2,
+.acadmice-info:hover h2,
+.parent-info:hover h2,
+.address-info:hover h2 {
+    letter-spacing: .6px;
+}
+/*=========================================
+Smooth Transition
+=========================================*/
+* {
+    transition:
+        background-color .30s,
+        color .30s,
+        border-color .30s,
+        box-shadow .30s,
+        transform .30s;
+}
+/*=========================================
+Input Shadow
+=========================================*/
+input,
+select {
+    box-shadow: 0 2px 8px rgba(15, 23, 42, .04);
+}
+/*=========================================
+Section Divider Glow
+=========================================*/
+.personal-info h2 {
+    border-bottom-color: #bfdbfe;
+}
+.acadmice-info h2 {
+    border-bottom-color: #bbf7d0;
+}
+.parent-info h2 {
+    border-bottom-color: #fde68a;
+}
+.address-info h2 {
+    border-bottom-color: #fecaca;
+}
+main>h2 {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+form {
+    margin-top: 10px;
+}
+
+.address-info {
+    margin-bottom: 10px;
+}
+/*=========================================
+Responsive Design
+=========================================*/
+/*========== Large Laptop ==========*/
+@media (max-width:1200px) {
+    main {
+        width: 95%;
+    }
+}
+/*========== Laptop ==========*/
+@media (max-width:992px) {
+    body {
+        padding: 40px 15px;
+    }
+    main>h2 {
+        font-size: 40px;
+    }
+    main>p {
+        font-size: 16px;
+    }
+    .personal-info,
+    .acadmice-info,
+    .parent-info,
+    .address-info {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+        gap: 20px;
+    }
+}
+/*========== Tablet ==========*/
+@media (max-width:768px) {
+    body {
+        padding: 30px 15px;
+    }
+    main>h2 {
+        font-size: 34px;
+    }
+    main>p {
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+    .personal-info,
+    .acadmice-info,
+    .parent-info,
+    .address-info {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+    .personal-info h2,
+    .acadmice-info h2,
+    .parent-info h2,
+    .address-info h2 {
+        font-size: 26px;
+    }
+    input,
+    select {
+        height: 52px;
+    }
+    form>div:last-child {
+        flex-direction: column;
+    }
+    button,
+    .home-btn {
+        width: 100%;
+    }
+}
+/*========== Mobile ==========*/
+@media (max-width:576px) {
+    body {
+        padding: 20px 10px;
+    }
+    main>h2 {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+    main>p {
+        font-size: 14px;
+    }
+    .personal-info,
+    .acadmice-info,
+    .parent-info,
+    .address-info {
+        padding: 20px;
+        border-radius: 18px;
+    }
+    .personal-info h2,
+    .acadmice-info h2,
+    .parent-info h2,
+    .address-info h2 {
+        font-size: 22px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input,
+    select {
+        height: 48px;
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    .gender {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px;
+    }
+    .gender-option {
+        width: 100%;
+    }
+}
+/*========== Small Mobile ==========*/
+@media (max-width:400px) {
+    main>h2 {
+        font-size: 24px;
+    }
+    main>p {
+        font-size: 13px;
+    }
+    .personal-info,
+    .acadmice-info,
+    .parent-info,
+    .address-info {
+        padding: 16px;
+    }
+    .personal-info h2,
+    .acadmice-info h2,
+    .parent-info h2,
+    .address-info h2 {
+        font-size: 20px;
+    }
+    input,
+    select {
+        height: 45px;
+        font-size: 13px;
+    }
+    button,
+    .home-btn {
+        font-size: 14px;
+        padding: 14px;
+    }
+}

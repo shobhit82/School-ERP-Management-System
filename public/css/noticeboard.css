@@ -1,0 +1,1271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #f4f7fb;
+    color: #222;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 11px;
+}
+::-webkit-scrollbar-track {
+    background: #dbeafe;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            #2563eb,
+            #7c3aed,
+            #06b6d4);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            #1d4ed8,
+            #6d28d9,
+            #0891b2);
+}
+::selection {
+    background: #2563eb;
+    color: #fff;
+}
+main {
+    width: 90%;
+    margin: auto;
+    padding: 50px 0 80px;
+}
+body>h3 {
+    width: 100%;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg,
+            #2563eb,
+            #1e40af,
+            #3b82f6);
+    letter-spacing: 1px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .18);
+}
+body>h3 p {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ecf3ff;
+    letter-spacing: .4px;
+}
+/*=========================================
+ HR
+=========================================*/
+hr {
+    border: none;
+    height: 2px;
+    margin: 55px auto;
+    width: 100%;
+    background: linear-gradient(to right,
+            transparent,
+            #3b82f6,
+            transparent);
+}
+/*=========================================
+ Common Section
+=========================================*/
+.acadmice-notice,
+.fees-notice,
+.event-notice,
+.sport-notice,
+.holiday-notice,
+.transport-notice,
+.library-notice,
+.important-notice,
+.parent-notice {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+/*=========================================
+ Common Card
+=========================================*/
+.acadmice-notice>div,
+.fees-notice>div,
+.event-notice>div,
+.sport-notice>div,
+.holiday-notice>div,
+.transport-notice>div,
+.library-notice>div,
+.important-notice>div,
+.parent-notice>div {
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .08);
+    transition: .45s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e8eef8;
+}
+/*=========================================
+ Top Animation Line
+=========================================*/
+.acadmice-notice>div::before,
+.fees-notice>div::before,
+.event-notice>div::before,
+.sport-notice>div::before,
+.holiday-notice>div::before,
+.transport-notice>div::before,
+.library-notice>div::before,
+.important-notice>div::before,
+.parent-notice>div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 5px;
+    background: #2563eb;
+    transition: .45s;
+}
+.acadmice-notice>div:hover::before,
+.fees-notice>div:hover::before,
+.event-notice>div:hover::before,
+.sport-notice>div:hover::before,
+.holiday-notice>div:hover::before,
+.transport-notice>div:hover::before,
+.library-notice>div:hover::before,
+.important-notice>div:hover::before,
+.parent-notice>div:hover::before {
+    width: 100%;
+}
+/*=========================================
+ Hover
+=========================================*/
+.acadmice-notice>div:hover,
+.fees-notice>div:hover,
+.event-notice>div:hover,
+.sport-notice>div:hover,
+.holiday-notice>div:hover,
+.transport-notice>div:hover,
+.library-notice>div:hover,
+.important-notice>div:hover,
+.parent-notice>div:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 20px 45px rgba(37, 99, 235, .18);
+}
+/*=========================================
+ Card Heading
+=========================================*/
+.acadmice-notice h1,
+.fees-notice h1,
+.event-notice h1,
+.sport-notice h1,
+.holiday-notice h1,
+.transport-notice h1,
+.library-notice h1,
+.important-notice h1,
+.parent-notice h1 {
+    font-size: 22px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+/*=========================================
+ Notice Title
+=========================================*/
+h2 {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 18px;
+    line-height: 30px;
+}
+/*=========================================
+ Notice Details
+=========================================*/
+ul {
+    list-style: none;
+    margin-bottom: 18px;
+}
+ul li {
+    margin: 10px 0;
+    color: #4b5563;
+    font-size: 15px;
+    line-height: 24px;
+}
+/*=========================================
+ Notice Paragraph
+=========================================*/
+p {
+    color: #555;
+    line-height: 29px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+/*=========================================
+ Attachment
+=========================================*/
+h6 {
+    font-size: 12px;
+    color: #0e1426;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background-image: linear-gradient(to left,transparent,rgb(152, 152, 250),transparent);
+}
+/*=========================================
+ Read More Button
+=========================================*/
+h3 {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .35s;
+}
+h3:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, .3);
+}
+/*=========================================
+ ACADEMIC NOTICE
+=========================================*/
+.acadmice-notice {
+    position: relative;
+    padding-top: 90px;
+}
+.acadmice-notice::before {
+    content: "📚 Academic Notices";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #1d4ed8;
+    border-left: 8px solid #2563eb;
+    padding-left: 18px;
+}
+.acadmice-notice>div {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #eff6ff);
+    border-top: 6px solid #2563eb;
+    overflow: hidden;
+}
+.acadmice-notice>div:hover {
+    background: #eaf3ff;
+    box-shadow: 
+    0 20px 45px rgba(37,99,235,.20);
+    transform: translateY(-10px) scale(1.02);
+}
+.acadmice-notice h1 {
+    color: #2563eb;
+}
+.acadmice-notice h2 {
+    color: #111827;
+    position: relative;
+    display: inline-block;
+}
+.acadmice-notice h2::after {
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:3px;
+    background:#2563eb;
+    border-radius:10px;
+    transition:.4s;
+}
+.acadmice-notice>div:hover h2::after {
+    width:100%;
+}
+.acadmice-notice h3 {
+    background:#2563eb;
+}
+.acadmice-notice h3:hover {
+    background:#1d4ed8;
+}
+.acadmice-notice>div::after {
+    content:"ACADEMIC";
+    position:absolute;
+    top:18px;
+    right:-34px;
+    transform:rotate(45deg);
+    background:#2563eb;
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+    padding:6px 42px;
+}
+/* Shine Effect */
+.acadmice-notice>div::before {
+    content:"";
+    position:absolute;
+    top:-100%;
+    left:-120%;
+    width:80px;
+    height:300%;
+    background:rgba(255,255,255,.45);
+    transform:rotate(25deg);
+    transition:.8s;
+}
+.acadmice-notice>div:hover::before {
+    left:140%;
+}
+.acadmice-notice h1 {
+    transition:.35s;
+}
+.acadmice-notice>div:hover h1 {
+    transform:translateX(6px);
+}
+.acadmice-notice li {
+    transition:.35s;
+}
+.acadmice-notice li:hover {
+    color:#2563eb;
+    padding-left:8px;
+}
+.acadmice-notice p {
+transition:.35s;
+}
+.acadmice-notice>div:hover p {
+    color:#111827;
+}
+/*=========================================
+ FEES NOTICE
+=========================================*/
+.fees-notice {
+    position:relative;
+    padding-top:90px;
+}
+.fees-notice::before {
+    content:"💰 Fee Notices";
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:34px;
+    font-weight:700;
+    color:#16a34a;
+    border-left:8px solid #22c55e;
+    padding-left:18px;
+}
+.fees-notice>div {
+    position:relative;
+    background:linear-gradient(180deg,#ffffff,#f0fdf4);
+    border-top:6px solid #22c55e;
+    overflow:hidden;
+}
+.fees-notice>div:hover {
+    background:#ecfdf5;
+    box-shadow:
+    0 20px 45px rgba(34,197,94,.20);
+    transform:translateY(-10px) scale(1.02);
+}
+.fees-notice h1 {
+    color:#16a34a;
+}
+.fees-notice h2 {
+    color:#111827;
+    position:relative;
+    display:inline-block;
+}
+.fees-notice h2::after {
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:3px;
+    background:#22c55e;
+    border-radius:10px;
+    transition:.4s;
+}
+.fees-notice>div:hover h2::after {
+    width:100%;
+}
+.fees-notice h3 {
+    background:#22c55e;
+}
+.fees-notice h3:hover {
+    background:#16a34a;
+}
+.fees-notice>div::after {
+    content:"FEES";
+    position:absolute;
+    top:18px;
+    right:-34px;
+    transform:rotate(45deg);
+    background:#22c55e;
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+    padding:6px 42px;
+}
+/* Shine Effect */
+.fees-notice>div::before {
+    content:"";
+    position:absolute;
+    top:-100%;
+    left:-120%;
+    width:80px;
+    height:300%;
+    background:rgba(255,255,255,.45);
+    transform:rotate(25deg);
+    transition:.8s;
+}
+.fees-notice>div:hover::before {
+    left:140%;
+}
+.fees-notice h1 {
+    transition:.35s;
+}
+.fees-notice>div:hover h1 {
+    transform:translateX(6px);
+}
+.fees-notice li {
+    transition:.35s;
+}
+.fees-notice li:hover {
+    color:#16a34a;
+    padding-left:8px;
+}
+.fees-notice p {
+    transition:.35s;
+}
+.fees-notice>div:hover p {
+    color:#111827;
+}
+.event-notice {
+    position: relative;
+    padding-top: 90px;
+}
+.event-notice::before {
+    content: "🎉 Event Notices";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #ea580c;
+    border-left: 8px solid #f97316;
+    padding-left: 18px;
+}
+.event-notice>div {
+    background: linear-gradient(180deg, #ffffff, #fff7ed);
+    border-top: 6px solid #f97316;
+}
+.event-notice>div:hover {
+    background: #fff1e6;
+    box-shadow: 0 20px 45px rgba(249, 115, 22, .20);
+}
+.event-notice h1 {
+    color: #ea580c;
+}
+.event-notice h2 {
+    color: #111827;
+}
+.event-notice h3 {
+    background: #f97316;
+}
+.event-notice h3:hover {
+    background: #ea580c;
+}
+.event-notice>div::after {
+    content: "EVENT";
+    position: absolute;
+    top: 18px;
+    right: -34px;
+    transform: rotate(45deg);
+    background: #f97316;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 42px;
+    letter-spacing: 1px;
+}
+.event-notice h1 {
+    transition: .35s;
+}
+.event-notice>div:hover h1 {
+    transform: translateX(6px);
+}
+.event-notice li {
+    transition: .35s;
+}
+.event-notice li:hover {
+    color: #ea580c;
+    padding-left: 8px;
+}
+.event-notice p {
+    transition: .35s;
+}
+.event-notice>div:hover p {
+    color: #111827;
+}
+/*=========================================
+ SPORTS NOTICE
+=========================================*/
+.sport-notice {
+    position: relative;
+    padding-top: 90px;
+}
+.sport-notice::before {
+    content: "🏆 Sports Notices";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #7c3aed;
+    border-left: 8px solid #8b5cf6;
+    padding-left: 18px;
+}
+.sport-notice>div {
+    background: linear-gradient(180deg, #ffffff, #faf5ff);
+    border-top: 6px solid #8b5cf6;
+}
+.sport-notice>div:hover {
+    background: #f3e8ff;
+    box-shadow: 0 20px 45px rgba(139, 92, 246, .20);
+}
+.sport-notice h1 {
+    color: #7c3aed;
+}
+.sport-notice h2 {
+    color: #111827;
+}
+.sport-notice h3 {
+    background: #8b5cf6;
+}
+.sport-notice h3:hover {
+    background: #7c3aed;
+}
+.sport-notice>div::after {
+    content: "SPORT";
+    position: absolute;
+    top: 18px;
+    right: -34px;
+    transform: rotate(45deg);
+    background: #8b5cf6;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 40px;
+}
+.sport-notice h1 {
+    transition: .35s;
+}
+.sport-notice>div:hover h1 {
+    transform: translateX(6px);
+}
+.sport-notice li {
+    transition: .35s;
+}
+.sport-notice li:hover {
+    color: #7c3aed;
+    padding-left: 8px;
+}
+.sport-notice p {
+    transition: .35s;
+}
+.sport-notice>div:hover p {
+    color: #111827;
+}
+/*=========================================
+ CARD SHINE EFFECT
+=========================================*/
+.event-notice>div::before,
+.sport-notice>div::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -120%;
+    width: 80px;
+    height: 300%;
+    background: rgba(255, 255, 255, .45);
+    transform: rotate(25deg);
+    transition: .8s;
+}
+.event-notice>div:hover::before,
+.sport-notice>div:hover::before {
+    left: 140%;
+}
+/*=========================================
+ HOVER SCALE
+=========================================*/
+.event-notice>div:hover,
+.sport-notice>div:hover {
+    transform:
+        translateY(-10px) scale(1.02);
+}
+/*=========================================
+ TITLE UNDERLINE
+=========================================*/
+.event-notice h2,
+.sport-notice h2 {
+    position: relative;
+    display: inline-block;
+}
+.event-notice h2::after,
+.sport-notice h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    transition: .4s;
+}
+.event-notice h2::after {
+    background: #f97316;
+}
+.sport-notice h2::after {
+    background: #8b5cf6;
+}
+.event-notice>div:hover h2::after,
+.sport-notice>div:hover h2::after {
+    width: 100%;
+}
+/*=========================================
+ HOLIDAY NOTICE
+=========================================*/
+.holiday-notice {
+    position: relative;
+    padding-top: 90px;
+}
+.holiday-notice::before {
+    content: "🏖 Holiday Notices";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #dc2626;
+    border-left: 8px solid #ef4444;
+    padding-left: 18px;
+}
+.holiday-notice>div {
+    background: linear-gradient(180deg, #ffffff, #fff5f5);
+    border-top: 6px solid #ef4444;
+}
+.holiday-notice>div:hover {
+    background: #fff1f2;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 22px 45px rgba(239, 68, 68, .20);
+}
+.holiday-notice h1 {
+    color: #dc2626;
+}
+.holiday-notice h2 {
+    color: #111827;
+}
+.holiday-notice h3 {
+    background: #ef4444;
+}
+.holiday-notice h3:hover {
+    background: #dc2626;
+}
+.holiday-notice>div::after {
+    content: "HOLIDAY";
+    position: absolute;
+    top: 18px;
+    right: -38px;
+    transform: rotate(45deg);
+    background: #ef4444;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 44px;
+}
+.holiday-notice li {
+    transition: .35s;
+}
+.holiday-notice li:hover {
+    color: #dc2626;
+    padding-left: 8px;
+}
+.holiday-notice h1 {
+    transition: .35s;
+}
+.holiday-notice>div:hover h1 {
+    transform: translateX(6px);
+}
+.holiday-notice h2 {
+    position: relative;
+    display: inline-block;
+}
+.holiday-notice h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #ef4444;
+    border-radius: 20px;
+    transition: .35s;
+}
+.holiday-notice>div:hover h2::after {
+    width: 100%;
+}
+/*=========================================
+ TRANSPORT NOTICE
+=========================================*/
+.transport-notice {
+    position: relative;
+    padding-top: 90px;
+}
+.transport-notice::before {
+    content: "🚌 Transport Notices";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #0891b2;
+    border-left: 8px solid #06b6d4;
+    padding-left: 18px;
+}
+.transport-notice>div {
+    background: linear-gradient(180deg, #ffffff, #ecfeff);
+    border-top: 6px solid #06b6d4;
+}
+.transport-notice>div:hover {
+    background: #e0faff;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 22px 45px rgba(6, 182, 212, .20);
+}
+.transport-notice h1 {
+    color: #0891b2;
+}
+.transport-notice h2 {
+    color: #111827;
+}
+.transport-notice h3 {
+    background: #06b6d4;
+}
+.transport-notice h3:hover {
+    background: #0891b2;
+}
+.transport-notice>div::after {
+    content: "TRANSPORT";
+    position: absolute;
+    top: 18px;
+    right: -48px;
+    transform: rotate(45deg);
+    background: #06b6d4;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 50px;
+}
+.transport-notice li {
+    transition: .35s;
+}
+.transport-notice li:hover {
+    color: #0891b2;
+    padding-left: 8px;
+}
+.transport-notice h1 {
+    transition: .35s;
+}
+.transport-notice>div:hover h1 {
+    transform: translateX(6px);
+}
+.transport-notice h2 {
+    position: relative;
+    display: inline-block;
+}
+.transport-notice h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #06b6d4;
+    border-radius: 20px;
+    transition: .35s;
+}
+.transport-notice>div:hover h2::after {
+    width: 100%;
+}
+/*=========================================
+ SHINE EFFECT
+=========================================*/
+.holiday-notice>div::before,
+.transport-notice>div::before {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -120%;
+    width: 90px;
+    height: 300%;
+    background: rgba(255, 255, 255, .45);
+    transform: rotate(25deg);
+    transition: .8s;
+}
+.holiday-notice>div:hover::before,
+.transport-notice>div:hover::before {
+    left: 150%;
+}
+/*=========================================
+ LIBRARY NOTICE
+=========================================*/
+.library-notice {
+    position: relative;
+    padding-top: 90px;
+}
+.library-notice::before {
+    content: "📚 Library Notices";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #4338ca;
+    border-left: 8px solid #6366f1;
+    padding-left: 18px;
+}
+.library-notice>div {
+    background: linear-gradient(180deg,
+            #ffffff,
+            #eef2ff);
+    border-top: 6px solid #6366f1;
+}
+.library-notice>div:hover {
+    background: #e0e7ff;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 22px 45px rgba(99, 102, 241, .22);
+}
+.library-notice h1 {
+    color: #4338ca;
+}
+.library-notice h3 {
+    background: #6366f1;
+}
+.library-notice h3:hover {
+    background: #4338ca;
+}
+.library-notice>div::after {
+    content: "LIBRARY";
+    position: absolute;
+    top: 18px;
+    right: -40px;
+    transform: rotate(45deg);
+    background: #6366f1;
+    color: white;
+    padding: 6px 45px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.library-notice li {
+    transition: .35s;
+}
+.library-notice li:hover {
+    color: #4338ca;
+    padding-left: 8px;
+}
+.library-notice h1 {
+    transition: .35s;
+}
+.library-notice>div:hover h1 {
+    transform: translateX(7px);
+}
+/*=========================================
+ IMPORTANT NOTICE
+=========================================*/
+.important-notice {
+    position: relative;
+    padding-top: 90px;
+}
+.important-notice::before {
+    content: "⚠ Important Notices";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #b45309;
+    border-left: 8px solid #f59e0b;
+    padding-left: 18px;
+}
+.important-notice>div {
+    background: linear-gradient(180deg,
+            #ffffff,
+            #fffbeb);
+    border-top: 6px solid #f59e0b;
+}
+.important-notice>div:hover {
+    background: #fef3c7;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 22px 45px rgba(245, 158, 11, .25);
+}
+.important-notice h1 {
+    color: #b45309;
+}
+.important-notice h3 {
+    background: #f59e0b;
+}
+.important-notice h3:hover {
+    background: #d97706;
+}
+.important-notice>div::after {
+    content: "IMPORTANT";
+    position: absolute;
+    top: 18px;
+    right: -45px;
+    transform: rotate(45deg);
+    background: #f59e0b;
+    color: #fff;
+    padding: 6px 48px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.important-notice li {
+    transition: .35s;
+}
+.important-notice li:hover {
+    color: #b45309;
+    padding-left: 8px;
+}
+.important-notice h1 {
+    transition: .35s;
+}
+.important-notice>div:hover h1 {
+    transform: translateX(7px);
+}
+/*=========================================
+ PARENT NOTICE
+=========================================*/
+.parent-notice {
+    position: relative;
+    padding-top: 90px;
+}
+.parent-notice::before {
+    content: "👨‍👩‍👧 Parent Notices";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #be185d;
+    border-left: 8px solid #ec4899;
+    padding-left: 18px;
+}
+.parent-notice>div {
+    background: linear-gradient(180deg,
+            #ffffff,
+            #fdf2f8);
+    border-top: 6px solid #ec4899;
+}
+.parent-notice>div:hover {
+    background: #fce7f3;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 22px 45px rgba(236, 72, 153, .22);
+}
+.parent-notice h1 {
+    color: #be185d;
+}
+.parent-notice h3 {
+    background: #ec4899;
+}
+.parent-notice h3:hover {
+    background: #be185d;
+}
+.parent-notice>div::after {
+    content: "PARENT";
+    position: absolute;
+    top: 18px;
+    right: -35px;
+    transform: rotate(45deg);
+    background: #ec4899;
+    color: #fff;
+    padding: 6px 40px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.parent-notice li {
+    transition: .35s;
+}
+.parent-notice li:hover {
+    color: #be185d;
+    padding-left: 8px;
+}
+.parent-notice h1 {
+    transition: .35s;
+}
+.parent-notice>div:hover h1 {
+    transform: translateX(7px);
+}
+/*=========================================
+ COMMON FINAL CARD EFFECT
+=========================================*/
+.library-notice>div,
+.important-notice>div,
+.parent-notice>div {
+    overflow: hidden;
+}
+.library-notice>div::before,
+.important-notice>div::before,
+.parent-notice>div::before {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -120%;
+    width: 90px;
+    height: 300%;
+    background: rgba(255, 255, 255, .45);
+    transform: rotate(25deg);
+    transition: .8s;
+}
+.library-notice>div:hover::before,
+.important-notice>div:hover::before,
+.parent-notice>div:hover::before {
+    left: 150%;
+}
+/*=========================================
+ BACK TO HOME BUTTON
+=========================================*/
+.home-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    text-decoration: none;
+    background: linear-gradient(135deg,
+            #2563eb,
+            #1d4ed8);
+    color: #fff;
+    padding: 15px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    box-shadow:
+        0 15px 30px rgba(37, 99, 235, .35);
+    transition: .4s;
+    z-index: 999;
+}
+.home-btn:hover {
+    transform:
+        translateY(-8px) scale(1.05);
+    background: linear-gradient(135deg,
+            #1d4ed8,
+            #2563eb);
+    box-shadow:
+        0 20px 40px rgba(37, 99, 235, .45);
+}
+/*=========================================
+ SECTION SCROLL ANIMATION
+=========================================*/
+.acadmice-notice>div,
+.fees-notice>div,
+.event-notice>div,
+.sport-notice>div,
+.holiday-notice>div,
+.transport-notice>div,
+.library-notice>div,
+.important-notice>div,
+.parent-notice>div {
+    animation: cardShow .7s ease forwards;
+}
+@keyframes cardShow {
+    from {
+        opacity: 0;
+        transform:
+            translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+/*=========================================
+ LARGE SCREEN
+=========================================*/
+@media(max-width:1200px) {
+    .acadmice-notice,
+    .fees-notice,
+    .event-notice,
+    .sport-notice,
+    .holiday-notice,
+    .transport-notice,
+    .library-notice,
+    .important-notice,
+    .parent-notice {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+    body>h3 {
+        font-size: 36px;
+    }
+}
+/*=========================================
+ TABLET SCREEN
+=========================================*/
+@media(max-width:900px) {
+    main {
+        width: 92%;
+    }
+    .acadmice-notice,
+    .fees-notice,
+    .event-notice,
+    .sport-notice,
+    .holiday-notice,
+    .transport-notice,
+    .library-notice,
+    .important-notice,
+    .parent-notice {
+        grid-template-columns:
+            repeat(2, 1fr);
+        gap: 22px;
+    }
+    body>h3 {
+        font-size: 32px;
+        padding: 45px 15px;
+    }
+    body>h3 p {
+        font-size: 16px;
+    }
+    .acadmice-notice::before,
+    .fees-notice::before,
+    .event-notice::before,
+    .sport-notice::before,
+    .holiday-notice::before,
+    .transport-notice::before,
+    .library-notice::before,
+    .important-notice::before,
+    .parent-notice::before {
+        font-size: 28px;
+    }
+    .acadmice-notice>div,
+    .fees-notice>div,
+    .event-notice>div,
+    .sport-notice>div,
+    .holiday-notice>div,
+    .transport-notice>div,
+    .library-notice>div,
+    .important-notice>div,
+    .parent-notice>div {
+        padding: 22px;
+    }
+}
+/*=========================================
+ MOBILE SCREEN
+=========================================*/
+@media(max-width:600px) {
+    main {
+        width: 90%;
+        padding-top: 35px;
+    }
+    .acadmice-notice,
+    .fees-notice,
+    .event-notice,
+    .sport-notice,
+    .holiday-notice,
+    .transport-notice,
+    .library-notice,
+    .important-notice,
+    .parent-notice {
+        grid-template-columns:
+            1fr;
+        gap: 25px;
+    }
+    body>h3 {
+        font-size: 26px;
+        padding: 40px 10px;
+    }
+    body>h3 p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .acadmice-notice::before,
+    .fees-notice::before,
+    .event-notice::before,
+    .sport-notice::before,
+    .holiday-notice::before,
+    .transport-notice::before,
+    .library-notice::before,
+    .important-notice::before,
+    .parent-notice::before {
+        font-size: 24px;
+        border-left-width: 5px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    ul li {
+        font-size: 14px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .home-btn {
+        right: 15px;
+        bottom: 20px;
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+    .acadmice-notice>div::after,
+    .fees-notice>div::after,
+    .event-notice>div::after,
+    .sport-notice>div::after,
+    .holiday-notice>div::after,
+    .transport-notice>div::after,
+    .library-notice>div::after,
+    .important-notice>div::after,
+    .parent-notice>div::after {
+        display: none;
+    }
+}
+/*=========================================
+ SMALL MOBILE
+=========================================*/
+@media(max-width:400px) {
+    body>h3 {
+        font-size: 22px;
+    }
+    .home-btn {
+        width: 90%;
+        text-align: center;
+        right: 5%;
+    }
+    h3 {
+        font-size: 13px;
+        padding: 10px 18px;
+    }
+}
+/*=========================================
+ Smooth Appearance
+=========================================*/
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+button,
+a {
+ user-select: none;
+}

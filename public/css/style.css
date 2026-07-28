@@ -1,0 +1,793 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    background: linear-gradient(-45deg,
+            #dbeafe,
+            #bfdbfe,
+            #e0f2fe,
+            #d1fae5,
+            #ede9fe,
+            #fce7f3);
+    background-size: 500% 500%;
+    animation: bgMove 18s ease infinite;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body::before {
+    content: "";
+    width: 450px;
+    height: 450px;
+    position: fixed;
+    left: -180px;
+    top: -180px;
+    border-radius: 50%;
+    background: rgba(99, 102, 241, .22);
+    filter: blur(90px);
+    animation: circleOne 12s infinite alternate;
+    z-index: -1;
+}
+body::after {
+    content: "";
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    right: -200px;
+    bottom: -200px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, .20);
+    filter: blur(100px);
+    animation: circleTwo 15s infinite alternate;
+    z-index: -1;
+}
+@keyframes circleOne {
+    from {
+        transform: translateY(0px) translateX(0px);
+    }
+    to {
+        transform: translateY(120px) translateX(120px);
+    }
+}
+@keyframes circleTwo {
+    from {
+        transform: translateY(0px) translateX(0px);
+    }
+    to {
+        transform: translateY(-120px) translateX(-120px);
+    }
+}
+/*======================================================
+                SCROLLBAR
+======================================================*/
+::-webkit-scrollbar {
+    width: 11px;
+}
+::-webkit-scrollbar-track {
+    background: #dbeafe;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            #2563eb,
+            #7c3aed,
+            #06b6d4);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            #1d4ed8,
+            #6d28d9,
+            #0891b2);
+}
+/*======================================================
+                HOME
+======================================================*/
+.home {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 50px 60px;
+    position: relative;
+}
+/*======================================================
+                LOGO
+======================================================*/
+.logo {
+    text-align: center;
+    font-size: 58px;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    animation: logoAnimation 3s infinite alternate;
+}
+.logo b {
+    color: #2563eb;
+    position: relative;
+}
+.logo b::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 6px;
+    border-radius: 20px;
+    background: linear-gradient(90deg,
+            #2563eb,
+            #7c3aed,
+            #06b6d4);
+}
+@keyframes logoAnimation {
+    from {
+        transform: translateY(0);
+        text-shadow:
+            0 0 10px rgba(37, 99, 235, .20);
+    }
+    to {
+        transform: translateY(-8px);
+        text-shadow:
+            0 0 30px rgba(37, 99, 235, .50);
+    }
+}
+/*======================================================
+            REGISTRATION BUTTON
+======================================================*/
+.btn {
+    display: block;
+    width: 280px;
+    margin: 35px auto 60px;
+    text-align: center;
+    padding: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50px;
+    background: linear-gradient(135deg,
+            #2563eb,
+            #7c3aed);
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, .35);
+    transition: .4s;
+}
+.btn:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow:
+        0 20px 45px rgba(37, 99, 235, .45);
+}
+/*======================================================
+            CARD GRID
+======================================================*/
+.home>ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(438px, 1fr));
+    gap: 35px;
+    align-items: stretch;
+}
+/*======================================================
+                PREMIUM CARDS
+======================================================*/
+.home>ul>li {
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    min-height: 760px;
+    padding: 35px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, .70);
+    border: 1px solid rgba(255, 255, 255, .45);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .10);
+    transition: .45s;
+}
+/*=============================
+        TOP BORDER
+=============================*/
+.home>ul>li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+}
+/*=============================
+      GLOW CIRCLE
+=============================*/
+.home>ul>li::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    top: -120px;
+    right: -120px;
+    opacity: .15;
+    transition: .5s;
+}
+/*=============================
+        CARD COLORS
+=============================*/
+.home>ul>li:nth-child(1)::before {
+    background: #4f46e5;
+}
+.home>ul>li:nth-child(1)::after {
+    background: #4f46e5;
+}
+.home>ul>li:nth-child(2)::before {
+    background: #10b981;
+}
+.home>ul>li:nth-child(2)::after {
+    background: #10b981;
+}
+.home>ul>li:nth-child(3)::before {
+    background: #f59e0b;
+}
+.home>ul>li:nth-child(3)::after {
+    background: #f59e0b;
+}
+.home>ul>li:nth-child(4)::before {
+    background: #ef4444;
+}
+.home>ul>li:nth-child(4)::after {
+    background: #ef4444;
+}
+/*=============================
+        CARD HOVER
+=============================*/
+.home>ul>li:hover {
+    transform:
+        translateY(-15px) scale(1.02);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, .18);
+}
+.home>ul>li:hover::after {
+    transform: scale(1.5);
+    opacity: .25;
+}
+/*=============================
+            ICON
+=============================*/
+.icon {
+    width: 95px;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 38px;
+    transition: .45s;
+    animation: floatingIcon 3s infinite ease-in-out;
+}
+/*=============================
+        ICON COLORS
+=============================*/
+.home>ul>li:nth-child(1) .icon {
+    background: linear-gradient(135deg,
+            #6366f1,
+            #4338ca);
+}
+.home>ul>li:nth-child(2) .icon {
+    background: linear-gradient(135deg,
+            #22c55e,
+            #15803d);
+}
+.home>ul>li:nth-child(3) .icon {
+    background: linear-gradient(135deg,
+            #fbbf24,
+            #d97706);
+}
+.home>ul>li:nth-child(4) .icon {
+    background: linear-gradient(135deg,
+            #ef4444,
+            #b91c1c);
+}
+/*=============================
+        ICON HOVER
+=============================*/
+.home>ul>li:hover .icon {
+    transform:
+        rotate(10deg) scale(1.15);
+}
+/*=============================
+      ICON ANIMATION
+=============================*/
+@keyframes floatingIcon {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/*=============================
+            HEADING
+=============================*/
+.home h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*=============================
+          PARAGRAPH
+=============================*/
+.home p {
+    color: #4b5563;
+    line-height: 1.8;
+    font-size: 15px;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*=============================
+        LIST SECTION
+=============================*/
+.home>ul>li>ul {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+/*=============================
+         LIST ITEMS
+=============================*/
+.home>ul>li>ul>li {
+    list-style: none;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #374151;
+    background: #f8fafc;
+    transition: .35s;
+    text-align: left;
+}
+/*=============================
+        LIST HOVER
+=============================*/
+.home>ul>li>ul>li:hover {
+    transform: translateX(8px);
+    background: #ffffff;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .08);
+}
+/*======================================================
+              CARD BUTTONS
+======================================================*/
+.home>ul>li>a {
+    width: 100%;
+    padding: 16px 20px;
+    margin-top: auto;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+    z-index: 1;
+    margin-top: 10px;
+}
+/* Button Shine Effect */
+.home>ul>li>a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, .5),
+            transparent);
+    transition: .6s;
+}
+.home>ul>li>a:hover::before {
+    left: 100%;
+}
+/*======================================================
+          INDIVIDUAL BUTTON COLORS
+======================================================*/
+.home>ul>li:nth-child(1)>a {
+    background:
+        linear-gradient(135deg,
+            #6366f1,
+            #4338ca);
+    box-shadow:
+        0 10px 25px rgba(79, 70, 229, .35);
+}
+.home>ul>li:nth-child(2)>a {
+    background:
+        linear-gradient(135deg,
+            #22c55e,
+            #15803d);
+    box-shadow:
+        0 10px 25px rgba(16, 185, 129, .35);
+}
+.home>ul>li:nth-child(3)>a {
+    background:
+        linear-gradient(135deg,
+            #fbbf24,
+            #d97706);
+    box-shadow:
+        0 10px 25px rgba(245, 158, 11, .35);
+}
+.home>ul>li:nth-child(4)>a {
+    background:
+        linear-gradient(135deg,
+            #ef4444,
+            #b91c1c);
+    box-shadow:
+        0 10px 25px rgba(239, 68, 68, .35);
+}
+/* Button Hover */
+.home>ul>li>a:hover {
+    transform:
+        translateY(-5px) scale(1.03);
+    color: white;
+}
+/*======================================================
+            CARD FLOAT ANIMATION
+======================================================*/
+.home>ul>li {
+    animation:
+        cardShow .8s ease forwards;
+}
+.home>ul>li:nth-child(1) {
+    animation-delay: .1s;
+}
+.home>ul>li:nth-child(2) {
+    animation-delay: .2s;
+}
+.home>ul>li:nth-child(3) {
+    animation-delay: .3s;
+}
+.home>ul>li:nth-child(4) {
+    animation-delay: .4s;
+}
+@keyframes cardShow {
+    from {
+        opacity: 0;
+        transform:
+            translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+/*======================================================
+          LOGO PARTICLE EFFECT
+======================================================*/
+.logo {
+    position: relative;
+}
+.logo::before {
+    content: "✦";
+    position: absolute;
+    left: 20%;
+    top: 10px;
+    color: #2563eb;
+    font-size: 25px;
+    animation:
+        starMove 3s infinite;
+}
+.logo::after {
+    content: "✦";
+    position: absolute;
+    right: 20%;
+    bottom: 10px;
+    color: #7c3aed;
+    font-size: 25px;
+    animation:
+        starMove 4s infinite reverse;
+}
+@keyframes starMove {
+    0% {
+        transform:
+            translateY(0) rotate(0deg);
+        opacity: .4;
+    }
+    50% {
+        transform:
+            translateY(-20px) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform:
+            translateY(0) rotate(360deg);
+        opacity: .4;
+    }
+}
+/*======================================================
+        GLASS BORDER ANIMATION
+======================================================*/
+.home>ul>li:hover {
+    border:
+        1px solid rgba(255, 255, 255, .9);
+}
+/*======================================================
+          EXTRA BACKGROUND LIGHT EFFECT
+======================================================*/
+.home::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background:
+        rgba(124, 58, 237, .15);
+    filter: blur(70px);
+    left: 50%;
+    top: 20%;
+    animation:
+        homeGlow 8s infinite alternate;
+    z-index: -1;
+}
+@keyframes homeGlow {
+    from {
+        transform:
+            translate(-50%, 0);
+    }
+    to {
+        transform:
+            translate(-50%, 120px);
+    }
+}
+/*======================================================
+          TEXT HOVER EFFECT
+======================================================*/
+.home h1 {
+    transition: .4s;
+}
+.home>ul>li:hover h1 {
+    transform:
+        scale(1.05);
+}
+/*======================================================
+          SMOOTH PAGE ENTRY
+======================================================*/
+.home {
+    animation:
+        pageOpen 1s ease;
+}
+@keyframes pageOpen {
+    from {
+        opacity: 0;
+        transform:
+            scale(.95);
+    }
+    to {
+        opacity: 1;
+        transform:
+            scale(1);
+    }
+}
+/*======================================================
+              RESPONSIVE DESIGN
+======================================================*/
+/*=============================
+        LARGE SCREEN
+=============================*/
+@media(max-width:1400px) {
+    .home {
+        padding: 45px;
+    }
+    .home>ul {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+    .logo {
+        font-size: 52px;
+    }
+}
+/*=============================
+        LAPTOP / TABLET
+=============================*/
+@media(max-width:1100px) {
+    .home {
+        padding: 35px;
+    }
+    .home>ul {
+        grid-template-columns:
+            repeat(2, 1fr);
+        gap: 30px;
+    }
+    .home>ul>li {
+        min-height: 720px;
+        padding: 30px;
+    }
+    .logo {
+        font-size: 45px;
+    }
+    .home h1 {
+        font-size: 25px;
+    }
+}
+/*=============================
+        TABLET
+=============================*/
+@media(max-width:768px) {
+    .home {
+        padding: 25px 20px;
+    }
+    .logo {
+        font-size: 35px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    .logo::before,
+    .logo::after {
+        display: none;
+    }
+    .btn {
+        width: 90%;
+        font-size: 16px;
+        padding: 15px;
+        margin-bottom: 40px;
+    }
+    .home>ul {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .home>ul>li {
+        min-height: auto;
+        padding: 30px 25px;
+    }
+    .icon {
+        width: 85px;
+        height: 85px;
+        font-size: 32px;
+    }
+    .home h1 {
+        font-size: 20px;
+        min-height: auto;
+    }
+    .home p {
+        min-height: auto;
+        font-size: 14px;
+    }
+    .home>ul>li>a {
+        margin-top: 25px;
+    }
+}
+/*=============================
+        MOBILE
+=============================*/
+@media(max-width:480px) {
+    body {
+        overflow-x: hidden;
+    }
+    .home {
+        padding: 20px 15px;
+    }
+    .logo {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .btn {
+        width: 100%;
+        font-size: 15px;
+        border-radius: 30px;
+    }
+    .home>ul {
+        gap: 20px;
+    }
+    .home>ul>li {
+        border-radius: 22px;
+        padding: 25px 18px;
+    }
+    .icon {
+        width: 75px;
+        height: 75px;
+        font-size: 28px;
+    }
+    .home h1 {
+        font-size: 21px;
+    }
+    .home p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+    .home>ul>li>ul {
+        gap: 8px;
+    }
+    .home>ul>li>ul>li {
+        padding: 12px;
+        font-size: 13px;
+    }
+    .home>ul>li>a {
+        padding: 13px;
+        font-size: 14px;
+    }
+}
+/*=============================
+        SMALL MOBILE
+=============================*/
+@media(max-width:360px) {
+    .logo {
+        font-size: 24px;
+    }
+    .home h1 {
+        font-size: 19px;
+    }
+    .icon {
+        width: 65px;
+        height: 65px;
+        font-size: 24px;
+    }
+    .home>ul>li {
+        padding: 20px 15px;
+    }
+}
+/*======================================================
+          TOUCH DEVICE EFFECT
+======================================================*/
+@media(hover:none) {
+    .home>ul>li:hover {
+        transform: none;
+    }
+    .home>ul>li>a:hover {
+        transform: none;
+    }
+}
+/*======================================================
+          REDUCE MOTION SUPPORT
+======================================================*/
+@media(prefers-reduced-motion:reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academic Timetable Management</title>
+
+    <link rel="stylesheet" href="/css/timetable.css">
+
+</head>
+
+<body>
+
+    <h1>📅 Academic Timetable Management</h1>
+
+    <h3>
+        Create and customize timetables for every class efficiently.
+        Below are the timetables for Class 1 to Class 8.
+        Click the <strong>Customize Timetable</strong> button to edit
+        subjects, teachers, room number, class teacher and complete
+        weekly timetable.
+    </h3>
+
+    <main>
+
+        <% timetables.forEach(function(item){ %>
+
+            <section class="class">
+
+                <!-- ===============================
+                    Class Header
+            ================================ -->
+
+                <div class="class-name">
+
+                    <h1>
+
+                        <%= item.className %> Time Table
+
+                    </h1>
+
+                </div>
+
+                <!-- ===============================
+                    Class Information
+            ================================ -->
+
+                <div class="class-info">
+
+                    <div class="div">
+
+                        <h2>
+                            📖 Session :
+                            <%= item.session %>
+                        </h2>
+
+                        <h2>
+                            🏫 Class :
+                            <%= item.className %>
+                        </h2>
+
+                        <h2>
+                            🚪 Room Number :
+                            <%= item.roomNumber %>
+                        </h2>
+
+                        <h2>
+                            👨‍🏫 Class Teacher :
+                            <%= item.classTeacher %>
+                        </h2>
+
+                        <h2>
+                            ⏰ Shift :
+                            <%= item.shift %>
+                        </h2>
+
+                        <h2>
+                            📚 Total Periods :
+                            <%= item.totalPeriods %>
+                        </h2>
+
+                    </div>
+
+                    <div class="div">
+
+                        <h2>
+                            Weekly Academic Schedule
+                        </h2>
+
+                        <a href="/timetable/edit/<%= item._id %>">
+
+                            <button>
+
+                                ✏️ Customize Timetable
+
+                            </button>
+
+                        </a>
+
+                        <p>
+
+                            Click this button to customize the timetable.
+                            You can update subjects, teachers,
+                            class teacher, room number and the
+                            complete weekly schedule.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- ===============================
+                    Timetable
+            ================================ -->
+
+                <div class="class-timetable">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Day</th>
+
+                                <th>Period 1
+                                    <br>
+                                    08:00 AM – 08:45 AM
+                                </th>
+
+                                <th>Period 2
+                                    <br>
+                                    08:45 AM – 09:30 AM
+                                </th>
+
+                                <th>Period 3
+                                    <br>
+                                    09:30 AM – 10:15 AM
+                                </th>
+
+                                <th>Period 4
+                                    <br>
+                                    10:15 AM – 11:00 AM
+                                </th>
+                                <th>Break
+                                    <br>
+                                    11:00 AM – 11:30 AM
+                                </th>
+
+                                <th>Period 5
+                                    <br>
+                                    11:30 AM – 12:15 PM
+                                </th>
+
+                                <th>Period 6
+                                    <br>
+                                    12:15 PM – 01:00 PM
+                                </th>
+
+                                <th>Period 7
+                                    <br>
+                                    01:00 PM – 01:45 PM
+                                </th>
+
+                                <th>Period 8
+                                    <br>
+                                    01:45 PM – 02:30 PM
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <!-- Monday -->
+
+                            <tr>
+
+                                <th>Monday</th>
+
+                                <td>
+                                    <strong>
+                                        <%= item.monday.period1.subject %>
+                                    </strong>
+                                    <br>
+                                    <small>
+                                        <%= item.monday.period1.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.monday.period2.subject %>
+                                    </strong>
+                                    <br>
+                                    <small>
+                                        <%= item.monday.period2.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.monday.period3.subject %>
+                                    </strong>
+                                    <br>
+                                    <small>
+                                        <%= item.monday.period3.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.monday.period4.subject %>
+                                    </strong>
+                                    <br>
+                                    <small>
+                                        <%= item.monday.period4.teacher %>
+                                    </small>
+                                </td>
+
+                                <td  rowspan="6">
+                                    <strong>🍴 Lunch Break</strong>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.monday.period5.subject %>
+                                    </strong>
+                                    <br>
+                                    <small>
+                                        <%= item.monday.period5.teacher %>
+                                    </small>
+                                </td>
+                                <td>
+                                    <strong>
+                                        <%= item.monday.period6.subject %>
+                                    </strong>
+                                    <br>
+                                    <small>
+                                        <%= item.monday.period6.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.monday.period7.subject %>
+                                    </strong>
+                                    <br>
+                                    <small>
+                                        <%= item.monday.period7.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.monday.period8.subject %>
+                                    </strong>
+                                    <br>
+                                    <small>
+                                        <%= item.monday.period8.teacher %>
+                                    </small>
+                                </td>
+
+                            </tr>
+
+                            <!-- Tuesday -->
+
+                            <tr>
+
+                                <th>Tuesday</th>
+
+                                <td>
+                                    <strong>
+                                        <%= item.tuesday.period1.subject %>
+                                    </strong><br>
+                                    <small>
+                                        <%= item.tuesday.period1.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.tuesday.period2.subject %>
+                                    </strong><br>
+                                    <small>
+                                        <%= item.tuesday.period2.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.tuesday.period3.subject %>
+                                    </strong><br>
+                                    <small>
+                                        <%= item.tuesday.period3.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.tuesday.period4.subject %>
+                                    </strong><br>
+                                    <small>
+                                        <%= item.tuesday.period4.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.tuesday.period5.subject %>
+                                    </strong><br>
+                                    <small>
+                                        <%= item.tuesday.period5.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.tuesday.period6.subject %>
+                                    </strong><br>
+                                    <small>
+                                        <%= item.tuesday.period6.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.tuesday.period7.subject %>
+                                    </strong><br>
+                                    <small>
+                                        <%= item.tuesday.period7.teacher %>
+                                    </small>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        <%= item.tuesday.period8.subject %>
+                                    </strong><br>
+                                    <small>
+                                        <%= item.tuesday.period8.teacher %>
+                                    </small>
+                                </td>
+
+                            </tr>
+                            <!-- Wednesday -->
+
+                            <tr>
+
+                                <th>Wednesday</th>
+
+                                <td><strong>
+                                        <%= item.wednesday.period1.subject %>
+                                    </strong><br><small>
+                                        <%= item.wednesday.period1.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.wednesday.period2.subject %>
+                                    </strong><br><small>
+                                        <%= item.wednesday.period2.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.wednesday.period3.subject %>
+                                    </strong><br><small>
+                                        <%= item.wednesday.period3.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.wednesday.period4.subject %>
+                                    </strong><br><small>
+                                        <%= item.wednesday.period4.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.wednesday.period5.subject %>
+                                    </strong><br><small>
+                                        <%= item.wednesday.period5.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.wednesday.period6.subject %>
+                                    </strong><br><small>
+                                        <%= item.wednesday.period6.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.wednesday.period7.subject %>
+                                    </strong><br><small>
+                                        <%= item.wednesday.period7.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.wednesday.period8.subject %>
+                                    </strong><br><small>
+                                        <%= item.wednesday.period8.teacher %>
+                                    </small></td>
+
+                            </tr>
+
+                            <!-- Thursday -->
+
+                            <tr>
+
+                                <th>Thursday</th>
+
+                                <td><strong>
+                                        <%= item.thursday.period1.subject %>
+                                    </strong><br><small>
+                                        <%= item.thursday.period1.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.thursday.period2.subject %>
+                                    </strong><br><small>
+                                        <%= item.thursday.period2.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.thursday.period3.subject %>
+                                    </strong><br><small>
+                                        <%= item.thursday.period3.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.thursday.period4.subject %>
+                                    </strong><br><small>
+                                        <%= item.thursday.period4.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.thursday.period5.subject %>
+                                    </strong><br><small>
+                                        <%= item.thursday.period5.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.thursday.period6.subject %>
+                                    </strong><br><small>
+                                        <%= item.thursday.period6.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.thursday.period7.subject %>
+                                    </strong><br><small>
+                                        <%= item.thursday.period7.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.thursday.period8.subject %>
+                                    </strong><br><small>
+                                        <%= item.thursday.period8.teacher %>
+                                    </small></td>
+
+                            </tr>
+
+                            <!-- Friday -->
+
+                            <tr>
+
+                                <th>Friday</th>
+
+                                <td><strong>
+                                        <%= item.friday.period1.subject %>
+                                    </strong><br><small>
+                                        <%= item.friday.period1.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.friday.period2.subject %>
+                                    </strong><br><small>
+                                        <%= item.friday.period2.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.friday.period3.subject %>
+                                    </strong><br><small>
+                                        <%= item.friday.period3.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.friday.period4.subject %>
+                                    </strong><br><small>
+                                        <%= item.friday.period4.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.friday.period5.subject %>
+                                    </strong><br><small>
+                                        <%= item.friday.period5.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.friday.period6.subject %>
+                                    </strong><br><small>
+                                        <%= item.friday.period6.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.friday.period7.subject %>
+                                    </strong><br><small>
+                                        <%= item.friday.period7.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.friday.period8.subject %>
+                                    </strong><br><small>
+                                        <%= item.friday.period8.teacher %>
+                                    </small></td>
+
+                            </tr>
+
+                            <!-- Saturday -->
+
+                            <tr>
+
+                                <th>Saturday</th>
+
+                                <td><strong>
+                                        <%= item.saturday.period1.subject %>
+                                    </strong><br><small>
+                                        <%= item.saturday.period1.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.saturday.period2.subject %>
+                                    </strong><br><small>
+                                        <%= item.saturday.period2.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.saturday.period3.subject %>
+                                    </strong><br><small>
+                                        <%= item.saturday.period3.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.saturday.period4.subject %>
+                                    </strong><br><small>
+                                        <%= item.saturday.period4.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.saturday.period5.subject %>
+                                    </strong><br><small>
+                                        <%= item.saturday.period5.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.saturday.period6.subject %>
+                                    </strong><br><small>
+                                        <%= item.saturday.period6.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.saturday.period7.subject %>
+                                    </strong><br><small>
+                                        <%= item.saturday.period7.teacher %>
+                                    </small></td>
+                                <td><strong>
+                                        <%= item.saturday.period8.subject %>
+                                    </strong><br><small>
+                                        <%= item.saturday.period8.teacher %>
+                                    </small></td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <% }) %>
+
+    </main>
+
+    <a href="/" class="home-btn">
+
+        ← Back to Home
+
+    </a>
+
+</body>
+
+</html>

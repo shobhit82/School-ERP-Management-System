@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+}
+::-webkit-scrollbar-track {
+    background: #dbeafe;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            #2563eb,
+            #7c3aed,
+            #06b6d4);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            #1d4ed8,
+            #6d28d9,
+            #0891b2);
+}
+/*=========================================
+Body
+=========================================*/
+body {
+    background: linear-gradient(135deg, #eef5ff, #dcecff, #edf7ff);
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+/*=========================================
+Main
+=========================================*/
+main {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+}
+/*=========================================
+Heading
+=========================================*/
+main>h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #0f172a;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: .5px;
+}
+main>p {
+    width: 900px;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    color: #475569;
+    line-height: 1.9;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+/*=========================================
+Cards
+=========================================*/
+.student-add,
+.student-list,
+.student-info {
+    background: white;
+    border-radius: 25px;
+    padding: 45px;
+    margin-bottom: 45px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .08);
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
+}
+.student-add:hover,
+.student-list:hover,
+.student-info:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .12);
+}
+/*=========================================
+Different Colors
+=========================================*/
+.student-add {
+    border-top: 8px solid #2563eb;
+}
+.student-list {
+    border-top: 8px solid #16a34a;
+}
+.student-info {
+    border-top: 8px solid #f97316;
+}
+/*=========================================
+Section Heading
+=========================================*/
+.student-add h2,
+.student-list h2,
+.student-info h2 {
+    font-size: 33px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.student-add p,
+.student-list p,
+.student-info p {
+    color: #64748b;
+    line-height: 1.9;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+.student-list a:hover{
+    color: white;
+}
+/*=========================================
+Buttons
+=========================================*/
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .35s;
+}
+/*=========================================
+Add Student Button
+=========================================*/
+.student-add button {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 16px 34px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.student-add button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, .35);
+}
+/*=========================================
+Class Grid
+=========================================*/
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 22px;
+}
+.class-grid button {
+    padding: 20px;
+    background: white;
+    border: 2px solid #16a34a;
+    color: #16a34a;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+.class-grid button:hover {
+    background: #16a34a;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(22, 163, 74, .3);
+}
+.class-grid button a{
+    color: #16a34a;
+}
+.class-grid button:hover a{
+   color: white;
+}
+/*=========================================
+Form
+=========================================*/
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+.form div {
+    display: flex;
+    flex-direction: column;
+}
+.form label {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #334155;
+    font-weight: 600;
+}
+.form input,
+.form select {
+    padding: 15px 18px;
+    border-radius: 12px;
+    border: 2px solid #dbe3ef;
+    outline: none;
+    font-size: 16px;
+    transition: .3s;
+    background: #f8fafc;
+}
+.form input:focus,
+.form select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, .15);
+    background: white;
+}
+/*=========================================
+Search Button
+=========================================*/
+.form button {
+    margin-top: 33px;
+    width: 100%;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(249, 115, 22, .35);
+}
+/*=========================================
+Home Button
+=========================================*/
+.home-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    text-decoration: none;
+    background: linear-gradient(135deg,
+            #2563eb,
+            #1d4ed8);
+    color: #fff;
+    padding: 15px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    box-shadow:
+        0 15px 30px rgba(37, 99, 235, .35);
+    transition: .4s;
+    z-index: 999;
+}
+
+.home-btn:hover {
+    transform:
+        translateY(-8px) scale(1.05);
+    background: linear-gradient(135deg,
+            #1d4ed8,
+            #2563eb);
+    box-shadow:
+        0 20px 40px rgba(37, 99, 235, .45);
+}
+/*=========================================
+Responsive
+=========================================*/
+@media(max-width:768px) {
+    main>h1 {
+        font-size: 36px;
+    }
+    main>p {
+        font-size: 16px;
+    }
+    .student-add,
+    .student-list,
+    .student-info {
+        padding: 30px;
+    }
+    .student-add h2,
+    .student-list h2,
+    .student-info h2 {
+        font-size: 28px;
+    }
+    .class-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width:500px) {
+    .class-grid {
+        grid-template-columns: 1fr;
+    }
+    .form {
+        grid-template-columns: 1fr;
+    }
+    main>h1 {
+        font-size: 30px;
+    }
+}

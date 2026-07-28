@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue New Book</title>
+    <link rel="stylesheet" href="/css/issuebook.css">
+    <link rel="stylesheet" href="/icon/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>📚 Issue Book Management</h1>
+            <p>
+                Manage book issuing records easily by assigning books to students.
+                Add new issue entries, track issued books, and maintain proper
+                library transaction records.
+            </p>
+        </div>
+
+        <div class="form-control">
+            <form action="/library/add" method="post">
+                <div>
+                    <label for="">Class</label>
+                    <select name="chooseclass" required id="">
+                        <option value="">--Select--</option>
+                        <option value="class 1">Class 1</option>
+                        <option value="class 2">Class 2</option>
+                        <option value="class 3">Class 3</option>
+                        <option value="class 4">Class 4</option>
+                        <option value="class 5">Class 5</option>
+                        <option value="class 6">Class 6</option>
+                        <option value="class 7">Class 7</option>
+                        <option value="class 8">Class 8</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="">Roll Number</label>
+                    <input type="text" name="rollno" placeholder="Student Roll Number" required>
+                </div>
+
+                <div>
+                    <label for="">Book Name</label>
+                    <input type="text" name="bookname" placeholder="Enter Book Name" id="" required>
+                </div>
+
+                <div>
+                    <label for="">Issue Date</label>
+                    <input type="date" name="issuedate" required id="">
+                </div>
+
+                <div>
+                    <label for="">Issue Duration (Days)</label>
+                    <input type="text" name="issueduration" readonly value="7 Days" id="">
+                </div>
+
+                <div>
+                    <label for="">Issued By</label>
+                    <input type="text" name="issueby" placeholder="Issued By (Librarian Name)" id="">
+                </div>
+
+                <div>
+                    <button type="submit">  Issue Book Now</button>
+                </div>
+            </form>
+
+            <p>
+                Fill in the required details below to issue a book. Make sure student
+                information and book details are correct for maintaining accurate library records.
+            </p>
+        </div>
+
+        <a href="/library">←  Go Back</a>
+    </div>
+</body>
+
+</html>
